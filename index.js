@@ -1,10 +1,6 @@
-//global scope
+//global score
 
-let humanScore = 0;
-let computerScore = 0;
 
-console.log(`👩‍🦰: ${humanScore}`);
-console.log(`👾: ${computerScore}`);
 
 //making human choose
 
@@ -13,21 +9,24 @@ function getHumanChoice() {
     return human;
 }
 
-
 //making computer choose
+
 function getComputerChoice() {
     const choices = ["rock", "paper", "scissors"]
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
+//play loop 5 times
 
-let humanChoice = getHumanChoice();
-let computerChoice = getComputerChoice();
 
-//logic to play single round
-
-function playRound (humanChoice, computerChoice){
-
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i < 5; i++) {
+        let humanChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+        
+    function playRound(humanChoice, computerChoice){
     if (humanChoice === computerChoice) {
         console.log("It's a tie! 🤝");
     } else if (humanChoice === "scissors" && computerChoice === "paper"){
@@ -43,9 +42,15 @@ function playRound (humanChoice, computerChoice){
         console.log("You lose! 🤬");
         computerScore++;
     }
+    }
+        console.log(`👩‍🦰: ${humanChoice}`);
+        console.log(`👾: ${computerChoice}`);
+
+        console.log(`Your score: ${humanScore}`)
+        console.log(`Computer score: ${computerScore}`)
+
+        playRound(humanChoice, computerChoice);
+    }
 }
 
-
-console.log(`👩‍🦰: ${humanChoice}`);
-console.log(`👾: ${computerChoice}`);
-playRound (humanChoice,computerChoice) 
+playGame()
