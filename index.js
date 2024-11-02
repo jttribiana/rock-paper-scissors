@@ -58,8 +58,13 @@ function playGame() {
         console.log(`👩‍🦰: ${humanChoice}`);
         console.log(`👾: ${computerChoice}`);
 
-        console.log(`Your score: ${humanScore}`)
-        console.log(`Computer score: ${computerScore}`)
+        console.log(`Your score: ${humanScore}`);
+        console.log(`Computer score: ${computerScore}`);
     }
 }
 playGame()
+
+//things to improve later on 
+//1. add announcement for who wins in 5 rounds
+//2. improve function readability (if else is too long)
+//3. add another window prompt when entered human choice is error
