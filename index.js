@@ -12,6 +12,9 @@ function getComputerChoice() {
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
+
+
+
 //play loop 5 times
 
 
@@ -50,6 +53,47 @@ function playGame() {
     
         }
     }
+
+} //added braces cos the end of functoin has been removed for now
+
+//addition of ui
+
+
+
+
+
+
+//making input button that would give r, p, s
+
+const div = document.createElement("div");
+
+
+const demo = document.createElement("p");
+demo.textContent = "Hello world";
+const body = document.querySelectorAll("body");
+const ul = document.createElement("ul");
+const li = document.createElement("li");
+const rockBtn = document.createElement("button");
+const paperBtn = document.createElement("button");
+const scissorsBtn = document.createElement("button");
+
+
+
+
+body.appendChild(ul)
+ul.appendChild(li);
+li.appendChild(rockBtn)
+rockBtn.textContent = "Rock"
+
+
+
+//problem no text inside the html, append the elements inside the body
+//you need to use prolly the insert before body to append
+
+
+
+
+/*
     
     for (let i = 1; i < 6; i++) {
         let humanChoice = getHumanChoice();
@@ -68,3 +112,4 @@ playGame()
 //1. add announcement for who wins in 5 rounds
 //2. improve function readability (if else is too long)
 //3. add another window prompt when entered human choice is error
+*/
