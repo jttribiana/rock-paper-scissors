@@ -1,3 +1,5 @@
+
+
 //making human choose
 
 function getHumanChoice() {
@@ -56,34 +58,49 @@ function playGame() {
 
 } //added braces cos the end of functoin has been removed for now
 
-//addition of ui
+///addition of ui
+
+//body--div append
+
+const body = document.querySelector("body");
+const div = document.createElement("div");
+body.appendChild(div);
+const demo = document.createElement("p");
 
 
+//create ul for button lists
 
+const ul = document.createElement("ul");
+
+//rock
+const rockLi = document.createElement("li");
+ul.appendChild(rockLi);
+const rockBtn = document.createElement("button");
+rockLi.appendChild(rockBtn);
+rockBtn.textContent = "Rock";
+
+//paper
+const paperLi = document.createElement("li");
+ul.appendChild(paperLi);
+const paperBtn = document.createElement("button");
+paperLi.appendChild(paperBtn);
+paperBtn.textContent = "Paper";
+
+//scissors
+const scissorsLi = document.createElement("li");
+ul.appendChild(scissorsLi);
+const scissorsBtn = document.createElement("button");
+scissorsLi.appendChild(scissorsBtn);
+scissorsBtn.textContent = "Scissors";
 
 
 
 //making input button that would give r, p, s
 
-const div = document.createElement("div");
-
-
-const demo = document.createElement("p");
-demo.textContent = "Hello world";
-const body = document.querySelectorAll("body");
-const ul = document.createElement("ul");
-const li = document.createElement("li");
-const rockBtn = document.createElement("button");
-const paperBtn = document.createElement("button");
-const scissorsBtn = document.createElement("button");
-
-
-
 
 body.appendChild(ul)
 ul.appendChild(li);
 li.appendChild(rockBtn)
-rockBtn.textContent = "Rock"
 
 
 
