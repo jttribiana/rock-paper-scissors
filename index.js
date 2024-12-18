@@ -1,20 +1,38 @@
 
-
 //making human choose
 
-function getHumanChoice() {
-    let human = window.prompt("rock, paper, or scissors").toLowerCase();
-    return human;
+/*
+
+const rockBtn = document.getElementById('rock').onclick = getHumanChoice;
+const paperBtn = document.getElementById('paper').onclick = getHumanChoice;
+const scissorsBtn = document.getElementById('scissors').onclick = getHumanChoice;
+
+function getHumanChoice(event) {
+    console.log(event.currentTarget.value)
 }
 
+console.log(getHumanChoice)
+
+*/
+
+const buttons = document.querySelectorAll("button")
+buttons.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        alert(event.target);
+    })
+});
+
+
+//So code above detects the click and returns a non string 
+
+//make code wherein it detects the button and when it has "rock" if, it will return a string of "rock" >> use link in notes to guide u
+/*
 //making computer choose
 
 function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"]
+    const choices = ["rock", "paper", "scissors"];
     return choices[Math.floor(Math.random() * choices.length)];
 }
-
-
 
 
 //play loop 5 times
@@ -56,61 +74,6 @@ function playGame() {
         }
     }
 
-} //added braces cos the end of functoin has been removed for now
-
-///addition of ui
-
-//body--div append
-
-const body = document.querySelector("body");
-const div = document.createElement("div");
-body.appendChild(div);
-const demo = document.createElement("p");
-
-
-//create ul for button lists
-
-const ul = document.createElement("ul");
-
-//rock
-const rockLi = document.createElement("li");
-ul.appendChild(rockLi);
-const rockBtn = document.createElement("button");
-rockLi.appendChild(rockBtn);
-rockBtn.textContent = "Rock";
-
-//paper
-const paperLi = document.createElement("li");
-ul.appendChild(paperLi);
-const paperBtn = document.createElement("button");
-paperLi.appendChild(paperBtn);
-paperBtn.textContent = "Paper";
-
-//scissors
-const scissorsLi = document.createElement("li");
-ul.appendChild(scissorsLi);
-const scissorsBtn = document.createElement("button");
-scissorsLi.appendChild(scissorsBtn);
-scissorsBtn.textContent = "Scissors";
-
-
-
-//making input button that would give r, p, s
-
-
-body.appendChild(ul)
-ul.appendChild(li);
-li.appendChild(rockBtn)
-
-
-
-//problem no text inside the html, append the elements inside the body
-//you need to use prolly the insert before body to append
-
-
-
-
-/*
     
     for (let i = 1; i < 6; i++) {
         let humanChoice = getHumanChoice();
@@ -125,8 +88,4 @@ li.appendChild(rockBtn)
 }
 playGame()
 
-//things to improve later on 
-//1. add announcement for who wins in 5 rounds
-//2. improve function readability (if else is too long)
-//3. add another window prompt when entered human choice is error
 */
