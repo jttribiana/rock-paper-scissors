@@ -12,15 +12,33 @@ function getHumanChoice(event) {
 }
 
 console.log(getHumanChoice)
+function getHumanChoice(){
+    let human = //the string that was triggered by the button
+    if 
+}
+const btnParent= document.getElementById('btnParent');
+const rockBtn = document.getElementById(rockBtn);
+
+btnParent.addEventListener('click', (event) => {
+    
+    if ()
+})
 
 */
+function getHumanChoice(){
+    const human = document.querySelectorAll(".btn");
 
-const buttons = document.querySelectorAll("button")
-buttons.forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-        alert(event.target);
+    human.forEach((bt) => {
+        bt.addEventListener('click', () => {
+            console.log(bt.innerHTML);
+        })
     })
-});
+    
+
+}
+
+
+
 
 
 //So code above detects the click and returns a non string 
