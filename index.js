@@ -1,50 +1,21 @@
 
 //making human choose
+let human = "";
 
-/*
-
-const rockBtn = document.getElementById('rock').onclick = getHumanChoice;
-const paperBtn = document.getElementById('paper').onclick = getHumanChoice;
-const scissorsBtn = document.getElementById('scissors').onclick = getHumanChoice;
-
-function getHumanChoice(event) {
-    console.log(event.currentTarget.value)
-}
-
-console.log(getHumanChoice)
 function getHumanChoice(){
-    let human = //the string that was triggered by the button
-    if 
+    return human;
 }
-const btnParent= document.getElementById('btnParent');
-const rockBtn = document.getElementById(rockBtn);
 
-btnParent.addEventListener('click', (event) => {
-    
-    if ()
+const buttons = document.querySelectorAll(".btn");
+
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        human = e.target.value;
+        console.log(`You chose: ${human}`);
+    })
 })
 
-*/
-function getHumanChoice(){
-    const human = document.querySelectorAll(".btn");
 
-    human.forEach((bt) => {
-        bt.addEventListener('click', () => {
-            console.log(bt.innerHTML);
-        })
-    })
-    
-
-}
-
-
-
-
-
-//So code above detects the click and returns a non string 
-
-//make code wherein it detects the button and when it has "rock" if, it will return a string of "rock" >> use link in notes to guide u
-/*
 //making computer choose
 
 function getComputerChoice() {
@@ -106,4 +77,3 @@ function playGame() {
 }
 playGame()
 
-*/
