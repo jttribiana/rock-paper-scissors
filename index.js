@@ -1,7 +1,10 @@
 
 
+
 let humanScore = 0;
 let computerScore = 0;
+
+
 
 const button = document.querySelectorAll(".btn");
 
@@ -47,18 +50,43 @@ button.forEach(button => {
                 } 
             }
             
-            
-                playRound(humanChoice, computerChoice);
-                console.log(`👩‍🦰: ${humanChoice}`);
-                console.log(`👾: ${computerChoice}`);
-            
-                console.log(`Your score: ${humanScore}`);
-                console.log(`Computer score: ${computerScore}`)
-            
+            playRound(humanChoice, computerChoice);
+
+                const playHuman = document.getElementById("playHuman");
+                playHuman.textContent = `You chose: ${humanChoice}`;
+                const playComputer = document.getElementById ("playComputer");
+                playComputer.textContent = `Computer chose: ${computerChoice}`;
+                const showHumanScore = document.getElementById("human");
+                showHumanScore.textContent = `Your Score: ${humanScore}`;
+                const showComputerScore = document.getElementById("computer");
+                showComputerScore.textContent = `Computer Score: ${computerScore}`;
+
+                ///this function works, but the reset part fails
+                //this part should, reset game, disable the buttons, and put out reset button
+                function chooseWinner (){
+                    if (humanScore === 5 && computerScore < 5){
+                        console.log("You win the game!")
+                        reset
+                    } else if (computerScore === 5 && humanScore < 5){
+                        console.log("Computer wins! Try again!")
+                        reset
+                    }
+                }
+
+                chooseWinner();
         }
         playGame()
     })
 })
+
+
+
+///game reset function 
+
+
+///announce the winner
+///reset the game, disable the button, reset click
+///make the UI better, showing the scores
 
 /*
 
