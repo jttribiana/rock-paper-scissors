@@ -1,14 +1,9 @@
-
-
-
 let humanScore = 0;
 let computerScore = 0;
 
+const clickButton = document.querySelectorAll(".btn");
 
-
-const button = document.querySelectorAll(".btn");
-
-button.forEach(button => {
+clickButton.forEach(button => {
     button.addEventListener('click', (e) => {
 
 
@@ -64,15 +59,41 @@ button.forEach(button => {
                 ///this function works, but the reset part fails
                 //this part should, reset game, disable the buttons, and put out reset button
                 function chooseWinner (){
+                    const rockBtn = document.getElementById("rockBtn");
+                    const paperBtn = document.getElementById("paperBtn");
+                    const scissorsBtn = document.getElementById("scissorsBtn");
+                    const divButtons = document.getElementById('btnParent');
+
                     if (humanScore === 5 && computerScore < 5){
-                        console.log("You win the game!")
-                        reset
+                        console.log("You win the game!");
+                        rockBtn.disabled = true;
+                        paperBtn.disabled = true;
+                        scissorsBtn.disabled = true;
+                        ///reset button
+                        const listBtn = document.createElement('li');
+                        divButtons.appendChild(listBtn);
+                        const reset = document.createElement('button');
+                        reset.textContent = "RESET";
+                        listBtn.appendChild(reset);
+
+                        
                     } else if (computerScore === 5 && humanScore < 5){
-                        console.log("Computer wins! Try again!")
-                        reset
+                        console.log("Computer wins! Try again!");
+                        rockBtn.disabled = true;
+                        paperBtn.disabled = true;
+                        scissorsBtn.disabled = true;
+                        ///reset button
+                        const listBtn = document.createElement('li');
+                        divButtons.appendChild(listBtn);
+                        const reset = document.createElement('button');
+                        reset.textContent = "RESET";
+                        listBtn.appendChild(reset);
+                    } else {
+                        rockBtn.disabled = false;
+                        paperBtn.disabled = false;
+                        scissorsBtn.disabled = false;
                     }
                 }
-
                 chooseWinner();
         }
         playGame()
@@ -89,6 +110,16 @@ button.forEach(button => {
 ///make the UI better, showing the scores
 
 /*
+
+                    if (humanScore === 5 && computerScore < 5)document.querySelectorAll(".btn").disabled=true;
+                    {
+                        console.log("You win the game!");
+                        clickButton.disabled = true;
+                    } else if (computerScore === 5 && humanScore < 5){
+                        console.log("Computer wins! Try again!");
+                        clickButton.disabled = true;
+
+                    } else clickButton.disabled = false;
 
     while (humanScore < 5 && computerScore < 5){
         let humanChoice = (e.target.value);
