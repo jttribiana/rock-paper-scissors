@@ -5,30 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Rock, Paper, Scissors</h1>
-    <div id="counter">
-        <p id="playHuman"></p>
-        <p id="playComputer"></p>
-        <p id="human"></p>
-        <p id="computer"></p>
+    <div id="container"></div>
+    <div id="main">
+    <div id="heading">
+        <h1>Rock, Paper, Scissors</h1>
+        <p id="winStatement"></p>
     </div>
     
-    <div id="btnParent">
-        <li><button class="btn" id="rockBtn" value = "rock" >ROCK</button></li>
-        <li><button class="btn" id="paperBtn" value = "paper">PAPER</button></li>
-        <li><button class="btn" id="scissorsBtn" value = "scissors">SCISSORS</button></li>
+    <div id="container">
+        <div id="counter">
+            <p id="playHuman">🧑‍💻</p>
+            <p id="playComputer">🤖</p>
+            
+        </div>
+
+        <div id="score">
+            <p id="human">0</p>
+            <p id="computer">0</p>
+        </div>
     </div>
+    
+    <ul id="btnParent">
+        <li><button class="btn" id="rockBtn" value = "Rock" >ROCK</button></li>
+        <li><button class="btn" id="paperBtn" value = "Paper">PAPER</button></li>
+        <li><button class="btn" id="scissorsBtn" value = "Scissors">SCISSORS</button></li>
+    </ul>
+
+</div>
+
+
+
 
 
 
 </body>
 
-<!-- "Add co
-des to the exercise, figured out easier
-r and cleaner code for computer choice
-, then added human choice which was ac
-tually easy becos i already watched a lot of javascript lesson which significantly help in
-terms of understading the functions of the variables and its placement inside the curcly braces and stuff -->
-</html>

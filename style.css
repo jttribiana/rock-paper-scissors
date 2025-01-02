@@ -1,0 +1,102 @@
+/* Reset styles */
+* {
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* layout */
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: purple;
+    margin: 2rem;
+    flex-wrap: nowrap;
+}
+
+#heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    padding: 1rem;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding: 2rem;
+
+}
+
+
+#container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+body {
+    font-family: "Poppins", serif;
+}
+
+
+h1 {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+  }
+
+
+p {
+    font-size: 1rem; /* Smaller heading */
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+button {
+    background-color: #EC8305;
+    color: white;
+    padding: .5rem;
+    margin: 1rem;
+    outline: none;
+    border-radius: .5rem;
+    flex-grow: 1;
+}
+
+
+
+/*
+
+things to improve later on!
+
+1. the reset button appearing makes the container expand
+2. better ui. idk what to do with it lol
+3. make the reset button work 
+4. make the whole container centered and make it bigger, expand or something
+
+*/
+
